@@ -1,0 +1,93 @@
+﻿@model IEnumerable<WebApplication2.Models.Invoice>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.InvoiceNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InvoiceDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Deadline)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PayerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PayerAddr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PayerTel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReceiverName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecevierAddr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReceiverTel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Goods)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.InvoiceNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InvoiceDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Deadline)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PayerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PayerAddr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PayerTel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReceiverName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecevierAddr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReceiverTel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Goods)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
