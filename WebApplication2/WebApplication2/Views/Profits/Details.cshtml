@@ -1,0 +1,50 @@
+﻿@model WebApplication2.Models.Profit
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Profit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SalesRevenue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalesRevenue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalesCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalesCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OperatingExpenses)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OperatingExpenses)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tax)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

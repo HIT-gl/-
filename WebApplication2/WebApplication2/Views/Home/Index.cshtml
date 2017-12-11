@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+    body {text-align:center}
+    .div{ margin:0 auto}
+</style>
+
+<div class="div" >
+    <img src="~/wwwroot/20171211154134.png" alt="图片" />
+</div>
+
+
+<div class="jumbotron">
+    
+    @Html.ActionLink("Invoice", "Invoicestart")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    @Html.ActionLink("Wage", "Wagestart")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    @Html.ActionLink("Profit", "Profitstart")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    @Html.ActionLink("Report", "Reportstart")
+</div>
+
